@@ -8,10 +8,6 @@ const thoughtController = {
         path: "reactions",
         select: "-__v",
       })
-      .populate({
-        path: "thoughts",
-        select: "-__v",
-      })
       .select("-__v")
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => {
@@ -37,12 +33,12 @@ const thoughtController = {
   },
 
   // Create a Thought
-  createThought({ body }, res) {
+  createThought({ params, body }, res) {
     Thought.create(body)
-      .then((thoughtData) => {
+      .then(({ _id }) => {
         return User.findOneAndUpdate(
-          { _id: body.userId },
-          { $push: { thoughts: thoughtData._id } },
+          { _id: params.userId },
+          { $push: { thoughts: _id } },
           { new: true }
         );
       })
@@ -53,10 +49,7 @@ const thoughtController = {
         }
         res.json(dbUserData);
       })
-      .catch((err) => {
-        console.log(err);
-        res.status(404).json(err);
-      });
+      .catch((err) => res.status(404).json(err));
   },
 
   // update a thought by ID
@@ -94,8 +87,8 @@ const thoughtController = {
   // create a reaction
   addReaction({ params, body }, res) {
     Thought.findOneAndUpdate(
-      { _id: params.thoughtId },
-      { $addToSet: { reactions: body } },
+      { _id: params.id },
+      { $push: { reactions: body } },
       { new: true }
     )
       .then((dbThoughtData) => {

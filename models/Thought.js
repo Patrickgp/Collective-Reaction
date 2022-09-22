@@ -35,6 +35,10 @@ const thoughtSchema = new Schema(
       maxlength: 280,
       // Must be between 1 and 280 characters
     },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
     username: {
       type: String,
       required: true,
