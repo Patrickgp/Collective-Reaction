@@ -39,7 +39,7 @@ const thoughtController = {
         return User.findOneAndUpdate(
           { _id: body.userId },
           { $push: { thoughts: _id } },
-          { new: true, runValidators: true }
+          { new: true }
         );
       })
       .then((dbUserData) => {
