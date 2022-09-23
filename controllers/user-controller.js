@@ -1,4 +1,5 @@
-const { User } = require("../models");
+const { User, Thought } = require("../models");
+const { deleteThought } = require("./thought-controller");
 
 const userController = {
   //get all users
