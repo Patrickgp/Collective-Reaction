@@ -43,7 +43,7 @@ userSchema.virtual("friendCount").get(function () {
 
 userSchema.pre("remove", function (next) {
   const user = this;
-  Thought.remove({ user: user._id });
+  Thought.remove({ user: user._id }).exec();
   next();
 });
 
