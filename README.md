@@ -9,7 +9,7 @@
 
 # Description
 
-This is a demonstration of my proficiency with MongoDB. The challenge was to build an API for a social network web application where users could share their thoughts, react to friends' thoughs, and create a friend list. I utilized Express.js, a MongoDB database and the Mongoose ODM. Included is a walkthrough video demonstration.
+This is a demonstration of my proficiency with MongoDB. The challenge was to build an API for a social network web application where users could share their thoughts, react to friends' thoughts, and create a friend list. I utilized Express.js, a MongoDB database and the Mongoose ODM. Included is a walkthrough video demonstration.
 
 ### Tech used in program: HTML,JavaScript,Node.js
 
