@@ -51,3 +51,14 @@ Email me: patrickgpoopathi@gmail.com
 # Test
 
 N/A
+
+# Screenshot
+
+* Starting up my NoSQL Server
+<img width="1624" alt="Screen Shot 2022-10-04 at 9 23 27 AM" src="https://user-images.githubusercontent.com/86730331/193833981-48dd7b78-ad9e-4426-8d56-6ba429001b8a.png">
+
+* Checking my routes through Insomnia/Postman
+<img width="1512" alt="Screen Shot 2022-10-04 at 9 27 36 AM" src="https://user-images.githubusercontent.com/86730331/193834152-827eee8a-e9be-4422-a4cd-e05ce1f3f890.png">
+
+* Snapshot of my user controller file as well as Mongoose ODM in action.
+<img width="1624" alt="Screen Shot 2022-10-04 at 9 28 17 AM" src="https://user-images.githubusercontent.com/86730331/193834472-0c9a8054-7d65-48d2-8704-2eaa7c1970fb.png">
